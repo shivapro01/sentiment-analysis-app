@@ -47,7 +47,7 @@ To run this application locally, you need to have the following:
 
 2. Start the server :
    `npm run start`
-3. Open your web browser and visit `http://localhost:8080`
+3. Open your web browser and visit `http://localhost:8082`
 4. Enter any web url in the input field and click submit.
 5. The results are displayed below.
 
