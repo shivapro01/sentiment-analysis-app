@@ -1,0 +1,106 @@
+/* Styles for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 10px;
+    font-size: 2rem;
+  }
+
+  main {
+    margin-top: 20px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  #results {
+    padding: 10px;
+  }
+
+  #form-results {
+    margin: 0;
+  }
+}
+
+/* Styles for screens between 601px and 1024px */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  main {
+    margin-top: 30px;
+  }
+
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  #results {
+    padding: 20px;
+  }
+}
+
+/* Styles for screens larger than 1024px */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 20px;
+  }
+
+  header {
+    padding: 30px;
+  }
+
+  main {
+    margin-top: 40px;
+  }
+
+  form {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  input[type="submit"] {
+    width: 80%;
+  }
+
+  #results {
+    padding: 30px;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
