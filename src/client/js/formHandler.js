@@ -29,7 +29,7 @@ function handleSubmit(event) {
   }
 }
 
-// Async POST   
+// Async POST
 const postFormData = async (url = "", data = {}) => {
   const response = await fetch(url, {
     method: "POST",
@@ -78,4 +78,4 @@ const checkPolarityScore = (score) => {
   return scoreValue.toUpperCase();
 };
 
-export { handleSubmit };
+export { handleSubmit, checkPolarityScore };
