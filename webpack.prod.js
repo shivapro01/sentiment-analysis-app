@@ -1,9 +1,16 @@
 const path = require("path");
 const webpack = require("webpack");
+const WorkboxPlugin = require("workbox-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/index.js",
+  optimization: {
+    minimizer: [new TerserPlugin({}), new OptimizeCssAssetsPlugin({})],
+  },
   mode: "production",
   output: {
     libraryTarget: "var",
@@ -18,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.(scss)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },
@@ -26,24 +33,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       filename: "index.html",
       template: path.resolve(__dirname, "./src/client/views/index.html"),
-      templateParameters(compilation, assets, options) {
-        return {
-          compilation: compilation,
-          webpack: compilation.getStats().toJson(),
-          webpackConfig: compilation.options,
-          htmlWebpackPlugin: {
-            files: assets,
-            options: options,
-          },
-          process,
-        };
-      },
-      minify: {
-        collapseWhitespace: true,
-        removeAttributeQuotes: true,
-        removeComments: true,
-      },
-      nodeModules: false,
     }),
+    new MiniCssExtractPlugin({ filename: "[name].css" }),
+    new WorkboxPlugin.GenerateSW(),
   ],
 };
