@@ -12,6 +12,13 @@ module.exports = {
     libraryTarget: "var",
     library: "Client",
   },
+  resolve: {
+    fallback: {
+      crypto: false,
+      path: false,
+      fs: false,
+    },
+  },
   module: {
     rules: [
       {
@@ -27,8 +34,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/client/views/index.html",
-      filename: "./index.html",
+      filename: "index.html",
+      template: path.resolve(__dirname, "./src/client/views/index.html"),
     }),
     new CleanWebpackPlugin({
       // Simulate the removal of files
