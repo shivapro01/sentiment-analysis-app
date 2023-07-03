@@ -22,6 +22,9 @@ function handleSubmit(event) {
         document.getElementById(
           "irony"
         ).innerHTML = `irony: ${data.irony.toUpperCase()}`;
+        document.getElementById(
+          "text"
+        ).innerHTML = `Text: ${data.sentence_list[0].text}`;
       }
     );
   } else {
