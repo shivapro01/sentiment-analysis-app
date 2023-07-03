@@ -15,6 +15,7 @@ This is a sentiment analysis application that analyzes the sentiment of text fro
 - The application uses Express.js as the server framework.
 - The client-side code is written in JavaScript, HTML, and CSS.
 - The application is responsive and mobile-friendly.
+- Testing using jest framework.
 
 ## Prerequisites
 
@@ -57,6 +58,10 @@ Make a .env file in the root directory and enter in the following format
 `API_KEY=your-api-key`
 
 Note: No spaces and quotes should be present in the key.
+
+## Testing:
+
+   You may run `npm run test` to test the functions using jest library.
 
 ## Dependencies
 
