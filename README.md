@@ -43,7 +43,7 @@ To run this application locally, you need to have the following:
 
 1. Build the project :
 
-   `npm run build`
+   `npm run build-prod`
 
 2. Start the server :
    `npm run start`
