@@ -2,6 +2,8 @@
 
 This is a sentiment analysis application that analyzes the sentiment of text from a given URL. It uses the MeaningCloud Sentiment Analysis API to perform the sentiment analysis.
 
+### Live Link - [Click Here](https://sentimentanalysis-sk.netlify.app/)
+
 ![Screenshot](https://github.com/shivapro01/sentiment-analysis-app/assets/119949395/402b2cd2-c1c2-4c1a-9bfb-cb94c83fb257)
 
 
